@@ -1,0 +1,63 @@
+### git worktree list
+C:/Users/RA/StudioProjects/ticketrush      3143eed [main]
+C:/Users/RA/StudioProjects/tr-early-access b7bce93 [feature/early-access]
+C:/Users/RA/StudioProjects/tr-hotfix       f622fb6 [hotfix/price]
+C:/Users/RA/StudioProjects/tr-review       cf752f5 [review/noa-refund]
+C:/Users/RA/StudioProjects/tr-waitlist     7cdedfc [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access      b7bce93 (C:/Users/RA/StudioProjects/tr-early-access) feat(pricing): raise club-member ticket limit from 4 to 6
++ feature/waitlist          7cdedfc (C:/Users/RA/StudioProjects/tr-waitlist) test(waitlist): cover normalization, validation and duplicates
++ hotfix/price              f622fb6 (C:/Users/RA/StudioProjects/tr-hotfix) Revert "perf: faster price formatting"
+* main                      3143eed [origin/main: ahead 14] Merge feature/waitlist: joinWaitlist for sold-out shows
++ review/noa-refund         cf752f5 (C:/Users/RA/StudioProjects/tr-review) [origin/noa/refund: ahead 1] docs(review): review of noa/refund – service fee is wrongly refunded
+  remotes/origin/HEAD       -> origin/main
+  remotes/origin/dana/promo d4b1e35 test: add student discount tests
+  remotes/origin/main       6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/noa/refund f7e8785 test: refund tests
+  remotes/origin/ruth/fixes fee9f58 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+*   3143eed (HEAD -> main, tag: v1.1) Merge feature/waitlist: joinWaitlist for sold-out shows
+|\  
+| * 7cdedfc (feature/waitlist) test(waitlist): cover normalization, validation and duplicates
+| * 344ae16 feat(waitlist): add joinWaitlist for sold-out shows
+* |   993bc5f Merge feature/early-access: club early access with student discount
+|\ \  
+| * | b7bce93 (feature/early-access) feat(pricing): raise club-member ticket limit from 4 to 6
+| * | 2e035ab Merge main into feature/early-access: bring in the ₪0.00 price hotfix
+| |\| 
+| * |   b079052 Merge origin/dana/promo: student discount alongside early access
+| |\ \  
+| | * | d4b1e35 (origin/dana/promo) test: add student discount tests
+| | * | 0841085 feat: student discount (15%)
+| * | | 103afa6 test(pricing): cover member discount and quantity limits from FEATURE.md
+| * | | e04d70f feat(pricing): add club-member discount and per-customer ticket limit
+| |/ /  
+* | | d1e8276 security: stop tracking js/config.js with the payment API key
+* | | 97edd7b fix: correct concert date in events.js
+| |/  
+|/|   
+* | f622fb6 (hotfix/price) Revert "perf: faster price formatting"
+|/  
+| * cf752f5 (review/noa-refund) docs(review): review of noa/refund – service fee is wrongly refunded
+| * f7e8785 (origin/noa/refund) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
